@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <button id="prevMonth">‹</button>
+      <h2 id="monthYear"></h2>
+      <button id="nextMonth">›</button>
+    </div>
+    <div class="calendar-days"></div>
+  </div>
+
+  <!-- Event Modal -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalTitle">Add Event</h3>
+      <form id="eventForm">
+        <input type="text" id="eventTitle" placeholder="Event Title" required />
+        <input type="datetime-local" id="eventDateTime" required />
+        <textarea id="eventDesc" placeholder="Description"></textarea>
+        <select id="eventRecurrence">
+          <option value="none">None</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="deleteEvent">Delete</button>
+          <button type="button" id="closeModal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
